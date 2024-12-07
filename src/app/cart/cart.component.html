@@ -1,0 +1,25 @@
+<div class="cart-container">
+  <h2>Votre Panier</h2>
+  <div *ngIf="cartService.cartItems().length === 0" class="empty-cart">
+    Votre panier est vide
+  </div>
+  <div *ngIf="cartService.cartItems().length > 0" class="cart-items">
+    <div *ngFor="let item of cartService.cartItems()" class="cart-item">
+      <img [src]="item.product.imageUrl" [alt]="item.product.name">
+      <div class="item-details">
+        <h3>{{ item.product.name }}</h3>
+        <p>{{ item.product.price | currency:'MAD':'symbol':'1.2-2' }}</p>
+        <div class="quantity-control">
+          <button (click)="cartService.decreaseQuantity(item.product.id)">-</button>
+          <span>Quantité : {{ item.quantity }}</span>
+          <button (click)="cartService.addToCart(item.product)">+</button>
+        </div>
+        <button (click)="cartService.removeFromCart(item.product.id)">Supprimer</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <h3>Total : {{ cartService.getTotalPrice() | currency:'MAD':'symbol':'1.2-2' }}</h3>
+      <button (click)="proceedToCheckout()">Procéder au paiement</button>
+    </div>
+  </div>
+</div>

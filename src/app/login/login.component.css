@@ -1,0 +1,105 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif; /* Smooth font */
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a); /* Dark gradient */
+  color: #f0f0f0;
+  margin: 0;
+}
+
+a {
+  color: #ff9800;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Login Container */
+.login-container {
+  background-color: #2e2e2e;
+  padding: 40px;
+  max-width: 400px;
+  margin: 100px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+  color: #f0f0f0;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0px 0px 8px rgba(255, 152, 0, 0.8);
+}
+
+/* Error Message */
+.error {
+  color: #ff4c4c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Submit Button */
+.btn {
+  background-color: #ff9800;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  background-color: #e67e00;
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #ff9800;
+}
+
+.register-link a:hover {
+  color: #ffd27f;
+}
